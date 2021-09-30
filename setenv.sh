@@ -99,6 +99,12 @@ options:
 |--Makefile         -
 |--ddriver_dump     ddriver -d后的磁盘布局，可用HexEditor查看
 |--README.md        SFS FUSE开发记录
+
+四. FUSE体验
+在本项目中，我们已经有了两个FUSE文件系统样例
+1. SFS  (${ROOT_DIR}/simplefs)
+2. MYFS (${ROOT_DIR}/sapmles)
+大家直接SSH切到相应目录，打断点运行即可
 ========================================================================
     " >$ROOT_DIR/$FS_DIR/SPEC.txt
     cat $ROOT_DIR/$FS_DIR/SPEC.txt
