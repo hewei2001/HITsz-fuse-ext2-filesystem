@@ -43,10 +43,10 @@ int sfs_calc_lvl(const char * path) {
  */
 int sfs_driver_read(int offset, uint8_t *out_content, int size) {
     int      offset_aligned = SFS_ROUND_DOWN(offset, SFS_IO_SZ());
-    int      size_aligned   = SFS_ROUND_UP(size, SFS_IO_SZ());
-    uint8_t* temp_content   = malloc(size_aligned);
+    int      bias           = offset - offset_aligned;
+    int      size_aligned   = SFS_ROUND_UP((size + bias), SFS_IO_SZ());
+    uint8_t* temp_content   = (uint8_t*)malloc(size_aligned);
     uint8_t* cur            = temp_content;
-    int      bias           = offset_aligned - offset;
     lseek(SFS_DRIVER(), offset_aligned, SEEK_SET);
     while (size_aligned != 0)
     {
@@ -68,11 +68,10 @@ int sfs_driver_read(int offset, uint8_t *out_content, int size) {
  */
 int sfs_driver_write(int offset, uint8_t *in_content, int size) {
     int      offset_aligned = SFS_ROUND_DOWN(offset, SFS_IO_SZ());
-    int      size_aligned   = SFS_ROUND_UP(size, SFS_IO_SZ());
+    int      bias           = offset - offset_aligned;
+    int      size_aligned   = SFS_ROUND_UP((size + bias), SFS_IO_SZ());
     uint8_t* temp_content   = (uint8_t*)malloc(size_aligned);
     uint8_t* cur            = temp_content;
-    int      bias           = offset_aligned - offset;
-    
     sfs_driver_read(offset_aligned, temp_content, size_aligned);
     memcpy(temp_content + bias, in_content, size);
     
@@ -339,6 +338,7 @@ struct sfs_inode* sfs_read_inode(struct sfs_dentry * dentry, int ino) {
         SFS_DBG("[%s] io error\n", __func__);
         return NULL;                    
     }
+    inode->dir_cnt = 0;
     inode->ino = inode_d.ino;
     inode->size = inode_d.size;
     inode->dentry = dentry;
@@ -347,7 +347,8 @@ struct sfs_inode* sfs_read_inode(struct sfs_dentry * dentry, int ino) {
         dir_cnt = inode_d.dir_cnt;
         for (i = 0; i < dir_cnt; i++)
         {
-            if (sfs_driver_read(SFS_DATA_OFS(ino), (uint8_t *)&dentry_d, 
+            if (sfs_driver_read(SFS_DATA_OFS(ino) + i * sizeof(struct sfs_dentry_d), 
+                                (uint8_t *)&dentry_d, 
                                 sizeof(struct sfs_dentry_d)) != SFS_ERROR_NONE) {
                 SFS_DBG("[%s] io error\n", __func__);
                 return NULL;                    
@@ -357,7 +358,6 @@ struct sfs_inode* sfs_read_inode(struct sfs_dentry * dentry, int ino) {
             sub_dentry->ino    = dentry_d.ino; 
             sfs_alloc_dentry(inode, sub_dentry);
         }
-        
     }
     else if (SFS_IS_REG(inode)) {
         inode->data = (uint8_t *)malloc(SFS_BLKS_SZ(SFS_DATA_PER_FILE));

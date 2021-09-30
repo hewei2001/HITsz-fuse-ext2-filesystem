@@ -29,14 +29,15 @@ function build_workspace() {
     mkdir $WORKSPACE_NAME
     sudo cp ./template/. $WORKSPACE_NAME -a 
     echo "生成工作路径: " $PWD/$WORKSPACE_NAME
-
-    echo $WORKSPACE_NAME
     # 修改 CMakeLists
     read -p "请输入项目名称: " PROJECT_NAME 
     sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" $WORKSPACE_NAME/CMakeLists.txt
     # 修改 src
     mv $WORKSPACE_NAME/src/SRC.c $WORKSPACE_NAME/src/${PROJECT_NAME}.c
 
+    # 修改测试脚本
+    sed -i "s/SAMPLE_PROJECT_NAME/${PROJECT_NAME}/g" $WORKSPACE_NAME/tests/fs_test.sh
+    
     C_COMPILER=$(which gcc)
     CPP_COMPILER=$(which g++)
 
@@ -55,6 +56,7 @@ function build_workspace() {
 
     # 修改tasks.json
     sed -i "s/GENERATOR/${GENERATOR}/g" $WORKSPACE_NAME/.vscode/tasks.json
+
 
     echo "
 ========================================================================
@@ -119,7 +121,7 @@ function main() {
 }
 
 if [[ $# < 1 ]]; then
-    read -p "请输入工作目录名称 (名称，非路径): " WORKSPACE_NAME 
+    read -p "请输入工作目录名称 ([工作]目录将被至于./fs目录下): " WORKSPACE_NAME 
 else 
     WORKSPACE_NAME=$1
 fi

@@ -1,9 +1,3 @@
-if(NOT WIN32)
-  string(ASCII 27 Esc)
-  set(ColorReset "${Esc}[m")
-  set(BoldRed     "${Esc}[1;31m")
-endif()
-
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(PROJECT_NAME VERSION 0.0.1 LANGUAGES C)
 
@@ -23,5 +17,5 @@ add_executable(PROJECT_NAME ${DIR_SRCS})
 message("FUSE_INCLUDE_DIR ${FUSE_INCLUDE_DIR}")
 message("FUSE_LIBRARIES ${FUSE_LIBRARIES}")
 message("DIR_SRCS ${DIR_SRCS}")
-message("${BoldRed}CMAKE_GENERATOR ${CMAKE_GENERATOR}${ColorReset}")
+message("!!!!!**CMAKE_GENERATOR** ${CMAKE_GENERATOR}")
 target_link_libraries(PROJECT_NAME ${FUSE_LIBRARIES})
