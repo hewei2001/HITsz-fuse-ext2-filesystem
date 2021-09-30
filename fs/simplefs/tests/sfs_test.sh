@@ -1,17 +1,39 @@
-BASE=/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/simplefs/tests/mnt
+#!/bin/bash
+ORIGIN_WORK_DIR=$PWD
 
-# echo ">> touch " $BASE/j 
-# touch $BASE/j
-# echo ">> echo 123 >" $BASE/j 
-# echo 123 >$BASE/j
-# echo ">> cat " $BASE/j
-# cat $BASE/j
-# echo ">> rm " $BASE/j
-# rm $BASE/j
+WORK_DIR=$(cd `dirname $0`; pwd)
+cd $WORK_DIR
 
-# echo ">> ls " $BASE/j
-# ls $BASE/
-echo "touch"
-touch $BASE/j
-echo "mv"
-mv $BASE/j $BASE/k
+MNTPOINT='./mnt'
+
+function test_touch() {
+
+}
+
+function test_mkdir() {
+
+}
+
+function test_ls() {
+
+}
+
+function test_mv() {
+
+}
+
+function test_rm() {
+
+}
+
+function test_mnt() {
+    
+}
+
+function test_main() {
+    test_touch
+    test_mkdir
+    test_ls
+}
+
+cd $ORIGIN_WORK_DIR
