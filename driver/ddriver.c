@@ -3,6 +3,7 @@
 #include <linux/init.h>
 #include <linux/fs.h>
 #include <asm/uaccess.h>
+#include <linux/uaccess.h>
 #include "ddriver_ctl.h"
 /******************************************************************************
 * SECTION: Macro definitions

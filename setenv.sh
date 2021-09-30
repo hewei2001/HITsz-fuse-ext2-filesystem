@@ -1,4 +1,4 @@
-ORIGIN_DIR=$PWD
+ROOT_DIR=$PWD
 DRIVER_DIR="./driver"
 FS_DIR="./fs"
 #===================================
@@ -7,7 +7,7 @@ function install_driver() {
     cd $DRIVER_DIR
     ./ddriver.sh -i
     ./ddriver.sh -h
-    cd $ORIGIN_DIR
+    cd $ROOT_DIR
 }
 
 function build_workspace() {
@@ -56,31 +56,54 @@ function build_workspace() {
     # 修改tasks.json
     sed -i "s/GENERATOR/${GENERATOR}/g" $WORKSPACE_NAME/.vscode/tasks.json
 
-    echo "========================================================================"
-    echo "一. 项目编译步骤如下: "
-    echo "Step 1. SSH打开${FS_DIR}/${WORKSPACE_NAME}"
-    echo "Step 2. 打开CMakeLists.txt文件"
-    echo "Step 3. ctrl + shift + p呼出命令菜单"
-    echo "Step 4. 输入CMake: Configure"
-    echo "Step 5. 查看Generator (已用!!!!!标记)"
-    echo "        1) 若为Unix Makefiles，请手动修改.vscode/tasks.json的command为make"
-    echo "        2) 若为Ninja，请手动修改.vscode/tasks.json的command为ninja"
-    echo "Step 6. 到${WORKSPACE_NAME}/src/${PROJECT_NAME}.c目录，打断点"
-    echo "Step 7. 按下F5进行调试"
-    echo ""
-    echo "二. 驱动使用说明: "
-    echo "我们已经为同学们安装好了ddriver (disk driver)，支持命令如下"
-    echo "ddriver [options]"
-    echo "options:"
-    echo "-i            安装ddriver"
-    echo "-t            测试ddriver[请忽略]"
-    echo "-d            导出ddriver至当前工作目录[PWD]"
-    echo "-r            擦除ddriver"
-    echo "-l            显示ddriver的Log"
-    echo "-h            打印本帮助菜单"
-    echo "========================================================================"
-    
-    cd $ORIGIN_DIR
+    echo "
+========================================================================
+一. 项目编译步骤如下: 
+Step 1. SSH打开${FS_DIR}/${WORKSPACE_NAME}
+Step 2. 打开CMakeLists.txt文件
+Step 3. ctrl + shift + p呼出命令菜单
+Step 4. 输入CMake: Configure
+Step 5. 查看Generator (已用!!!!!标记)
+        1) 若为Unix Makefiles，请手动修改.vscode/tasks.json的command为make
+        2) 若为Ninja，请手动修改.vscode/tasks.json的command为ninja
+Step 6. 到${WORKSPACE_NAME}/src/${PROJECT_NAME}.c目录，打断点
+Step 7. 按下F5进行调试
+
+二. 驱动使用说明: 
+我们已经为同学们安装好了ddriver (disk driver)，支持命令如下
+ddriver [options]
+options:
+-i            安装ddriver
+-t            测试ddriver[请忽略]
+-d            导出ddriver至当前工作目录[PWD]
+-r            擦除ddriver
+-l            显示ddriver的Log
+-h            打印本帮助菜单
+
+三. 文件结构说明
+1. 项目根目录: ${ROOT_DIR}
+|--driver           驱动文件
+|--fs               FUSE文件系统文件
+|--LICENSE          LICENSE GPL v3          
+|--README.md        实验相关说明
+|--setenv.sh        项目环境配置
+
+2. FUSE文件系统目录: 以${ROOT_DIR}/simplefs (SFS) 为例
+|--.vscode          VSCode启动配置
+|--build            CMake构建目录
+|--CMake            CMake Module目录
+|--include          SFS文件系统头文件
+|--src              SFS文件系统源文件
+|--tests            测试脚本，tests/mnt为测试挂载点
+|--CMakeLists.txt   -    
+|--Makefile         -
+|--ddriver_dump     ddriver -d后的磁盘布局，可用HexEditor查看
+|--README.md        SFS FUSE开发记录
+========================================================================
+    " >$ROOT_DIR/$FS_DIR/SPEC.txt
+    cat $ROOT_DIR/$FS_DIR/SPEC.txt
+    echo "上述说明已生成至" $ROOT_DIR/fs/SPEC.txt
+    cd $ROOT_DIR
 }
 
 function main() {
