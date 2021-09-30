@@ -1,0 +1,1 @@
+cmd_/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/driver/ddriver.mod := { echo  /home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/driver/ddriver.o;  echo; } > /home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/driver/ddriver.mod

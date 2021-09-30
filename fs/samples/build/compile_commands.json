@@ -1,0 +1,31 @@
+[
+{
+  "directory": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/build",
+  "command": "/bin/gcc-9  -I.././include   -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g   -o CMakeFiles/mfs-fuse.dir/src/bitmap.c.o   -c /home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/bitmap.c",
+  "file": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/bitmap.c"
+},
+
+{
+  "directory": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/build",
+  "command": "/bin/gcc-9  -I.././include   -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g   -o CMakeFiles/mfs-fuse.dir/src/fsdisk.c.o   -c /home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fsdisk.c",
+  "file": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fsdisk.c"
+},
+
+{
+  "directory": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/build",
+  "command": "/bin/gcc-9  -I.././include   -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g   -o CMakeFiles/mfs-fuse.dir/src/fsmain.c.o   -c /home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fsmain.c",
+  "file": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fsmain.c"
+},
+
+{
+  "directory": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/build",
+  "command": "/bin/gcc-9  -I.././include   -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g   -o CMakeFiles/mfs-fuse.dir/src/fsoperations.c.o   -c /home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fsoperations.c",
+  "file": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fsoperations.c"
+},
+
+{
+  "directory": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/build",
+  "command": "/bin/gcc-9  -I.././include   -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g   -o CMakeFiles/mfs-fuse.dir/src/fstree.c.o   -c /home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fstree.c",
+  "file": "/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/samples/src/fstree.c"
+}
+]

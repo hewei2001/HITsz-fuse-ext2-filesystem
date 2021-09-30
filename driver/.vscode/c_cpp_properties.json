@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/lib/gcc/x86_64-linux-gnu/9/include",
+                "/lib/modules/5.11.0-27-generic/build/arch/x86/include", 
+                "/lib/modules/5.11.0-27-generic/build/arch/x86/include/generated",  
+                "/lib/modules/5.11.0-27-generic/build/include", 
+                "/lib/modules/5.11.0-27-generic/build/arch/x86/include/uapi",
+                "/lib/modules/5.11.0-27-generic/build/arch/x86/include/generated/uapi", 
+                "/lib/modules/5.11.0-27-generic/build/include/uapi", 
+                "/lib/modules/5.11.0-27-generic/build/include/generated/uapi"
+            ],
+            "defines": [
+                "__KERNEL__",
+                "DCONFIG_X86_X32_ABI",
+                "CC_USING_FENTRY",
+                "MODULE"
+            ],
+            "compilerArgs": [
+                "-nostdinc",
+                "-m64"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

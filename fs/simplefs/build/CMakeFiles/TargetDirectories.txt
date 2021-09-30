@@ -1,0 +1,3 @@
+/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/simplefs/build/CMakeFiles/rebuild_cache.dir
+/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/simplefs/build/CMakeFiles/edit_cache.dir
+/home/deadpool/Desktop/Programming/MyWork/user-land-filesystem/fs/simplefs/build/CMakeFiles/sfs-fuse.dir

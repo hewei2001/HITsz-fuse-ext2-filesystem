@@ -1,0 +1,28 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "init.h": "c",
+        "uaccess.h": "c",
+        "unaligned.h": "c",
+        "string.h": "c",
+        "thread_info.h": "c",
+        "current.h": "c",
+        "sched.h": "c",
+        "fs.h": "c"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "*.mod*": true,
+        "*.cmd": true,
+        "*.symvers": true,
+        "*.order": true,
+        "*.o": true
+    }
+}
