@@ -10,11 +10,19 @@ function mkdev() {
 }
 
 function install_driver() {
-    if command -v apt-get > /dev/null 2>&1; then
-        sudo apt-get install make cmake fuse libfuse-dev
-    else 
-        sudo yum install make cmake fuse fuse-devel 
-    fi 
+    current_user=$(whoami)
+    if [ "$current_user" != "root" ]; then
+        has_root_permission=$(sudo -l -U "$current_user" | grep "(root) ALL")
+        if [ -n "$has_root_permission" ]; then
+            if command -v apt-get > /dev/null 2>&1; then
+                sudo apt-get install make cmake fuse libfuse-dev
+            else 
+                sudo yum install make cmake fuse fuse-devel 
+            fi 
+        else
+            echo "你没有权限安装内核模块"
+        fi
+    fi
     
     cd $DRIVER_DIR || exit
     ./ddriver.sh -i u           
