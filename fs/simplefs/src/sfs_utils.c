@@ -47,10 +47,12 @@ int sfs_driver_read(int offset, uint8_t *out_content, int size) {
     int      size_aligned   = SFS_ROUND_UP((size + bias), SFS_IO_SZ());
     uint8_t* temp_content   = (uint8_t*)malloc(size_aligned);
     uint8_t* cur            = temp_content;
-    lseek(SFS_DRIVER(), offset_aligned, SEEK_SET);
+    // lseek(SFS_DRIVER(), offset_aligned, SEEK_SET);
+    ddriver_seek(SFS_DRIVER(), offset_aligned, SEEK_SET);
     while (size_aligned != 0)
     {
-        read(SFS_DRIVER(), cur, SFS_IO_SZ());
+        // read(SFS_DRIVER(), cur, SFS_IO_SZ());
+        ddriver_read(SFS_DRIVER(), cur, SFS_IO_SZ());
         cur          += SFS_IO_SZ();
         size_aligned -= SFS_IO_SZ();   
     }
@@ -75,10 +77,12 @@ int sfs_driver_write(int offset, uint8_t *in_content, int size) {
     sfs_driver_read(offset_aligned, temp_content, size_aligned);
     memcpy(temp_content + bias, in_content, size);
     
-    lseek(SFS_DRIVER(), offset_aligned, SEEK_SET);
+    // lseek(SFS_DRIVER(), offset_aligned, SEEK_SET);
+    ddriver_seek(SFS_DRIVER(), offset_aligned, SEEK_SET);
     while (size_aligned != 0)
     {
-        write(SFS_DRIVER(), cur, SFS_IO_SZ());
+        // write(SFS_DRIVER(), cur, SFS_IO_SZ());
+        ddriver_write(SFS_DRIVER(), cur, SFS_IO_SZ());
         cur          += SFS_IO_SZ();
         size_aligned -= SFS_IO_SZ();   
     }
@@ -497,17 +501,17 @@ int sfs_mount(struct custom_options options){
     boolean             is_init = FALSE;
 
     sfs_super.is_mounted = FALSE;
-    if (strcmp(options.device, "/dev/ddriver") != 0)
-        return -SFS_ERROR_UNSUPPORTED;
 
-    driver_fd = open(options.device, O_RDWR);
+    // driver_fd = open(options.device, O_RDWR);
+    driver_fd = ddriver_open(options.device);
+
     if (driver_fd < 0) {
         return driver_fd;
     }
 
     sfs_super.driver_fd = driver_fd;
-    ioctl(driver_fd, IOC_REQ_DEVICE_SIZE,  &sfs_super.sz_disk);
-    ioctl(driver_fd, IOC_REQ_DEVICE_IO_SZ, &sfs_super.sz_io);
+    ddriver_ioctl(SFS_DRIVER(), IOC_REQ_DEVICE_SIZE,  &sfs_super.sz_disk);
+    ddriver_ioctl(SFS_DRIVER(), IOC_REQ_DEVICE_IO_SZ, &sfs_super.sz_io);
     
     root_dentry = new_dentry("/", SFS_DIR);
 
@@ -590,6 +594,7 @@ int sfs_umount() {
     }
 
     free(sfs_super.map_inode);
+    ddriver_close(SFS_DRIVER());
 
     return SFS_ERROR_NONE;
 }

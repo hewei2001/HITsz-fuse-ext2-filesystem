@@ -2,7 +2,7 @@
 ORIGIN_WORK_DIR=$PWD
 
 WORK_DIR=$(cd `dirname $0`; pwd)
-cd $WORK_DIR
+cd $WORK_DIR || exit
 
 MNTPOINT='./mnt'
 PROJECT_NAME="sfs-fuse"
@@ -23,7 +23,7 @@ function fail() {
 function test_mount() {
     TEST_CASE=$1
     echo ">>>>>>>>>>>>>>>>>>>> TEST_MOUNT"
-    ../build/${PROJECT_NAME} --device=/dev/ddriver ${MNTPOINT}
+    ../build/${PROJECT_NAME} --device="$HOME"/ddriver ${MNTPOINT}
     if [ $? -ne 0 ]; then
         fail $TEST_CASE
         exit 1
@@ -115,12 +115,12 @@ function test_remount() {
     fi
     pass "-> fusermount -u ${MNTPOINT}"
 
-    ../build/${PROJECT_NAME} --device=/dev/ddriver ${MNTPOINT}
+    ../build/${PROJECT_NAME} --device="$HOME"/ddriver ${MNTPOINT}
     if [ $? -ne 0 ]; then
         fail "remount"
         exit 1
     fi
-    pass "-> ../build/${PROJECT_NAME} --device=/dev/ddriver ${MNTPOINT}"
+    pass "-> ../build/${PROJECT_NAME} --device=""$HOME""/ddriver ${MNTPOINT}"
     
     core_tester ls ${MNTPOINT}/;
     core_tester ls ${MNTPOINT}/dir0;
@@ -144,7 +144,10 @@ function test_remount() {
 
 
 function test_main() {
-    ddriver -r
+    # ddriver -r
+    rm ~/ddriver -f
+    touch ~/ddriver 
+    
     test_mount "[all-the-mount-test]"
     echo ""
     test_mkdir "[all-the-mkdir-test]"

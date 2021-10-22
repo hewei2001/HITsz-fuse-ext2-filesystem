@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/build/PROJECT_NAME",
             "args": [
-                "--device=/dev/ddriver",
+                "--device=${env:HOME}/ddriver",
                 "-f",
                 "-d",
                 "-s",

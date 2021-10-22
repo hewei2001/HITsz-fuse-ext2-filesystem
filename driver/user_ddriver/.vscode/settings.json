@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "stdlib.h": "c",
+        "ddriver.h": "c",
+        "string.h": "c",
+        "errno-base.h": "c"
+    }
+}

@@ -9,7 +9,7 @@
 #include "string.h"
 #include "fuse.h"
 #include <stddef.h>
-#include "ddriver_ctl_user.h"
+#include "ddriver.h"
 #include "errno.h"
 #include "types.h"
 /******************************************************************************
@@ -45,28 +45,28 @@ struct sfs_dentry* sfs_lookup(const char * path, boolean * is_find, boolean* is_
 /******************************************************************************
 * SECTION: sfs.c
 *******************************************************************************/
-void* sfs_init(struct fuse_conn_info *);
-void  sfs_destroy(void *);
-int   sfs_mkdir(const char *, mode_t);
-int   sfs_getattr(const char *, struct stat *);
-int   sfs_readdir(const char *, void *, fuse_fill_dir_t, off_t,
-			      struct fuse_file_info *);
-int   sfs_mknod(const char *, mode_t, dev_t);
-int   sfs_write(const char *, const char *, size_t, off_t,
-		        struct fuse_file_info *);
-int   sfs_read(const char *, char *, size_t, off_t,
-		       struct fuse_file_info *);
-int   sfs_unlink(const char *);
-int   sfs_rmdir(const char *);
-int   sfs_rename(const char *, const char *);
-int   sfs_utimens(const char *, const struct timespec tv[2]);
-int   sfs_truncate(const char *, off_t);
-
-int   sfs_open(const char *, struct fuse_file_info *);
-int   sfs_opendir(const char *, struct fuse_file_info *);
-int   sfs_access(const char *, int);
+void* 			   sfs_init(struct fuse_conn_info *);
+void  			   sfs_destroy(void *);
+int   			   sfs_mkdir(const char *, mode_t);
+int   			   sfs_getattr(const char *, struct stat *);
+int   			   sfs_readdir(const char *, void *, fuse_fill_dir_t, off_t,
+						       struct fuse_file_info *);
+int   			   sfs_mknod(const char *, mode_t, dev_t);
+int   			   sfs_write(const char *, const char *, size_t, off_t,
+					         struct fuse_file_info *);
+int   			   sfs_read(const char *, char *, size_t, off_t,
+					        struct fuse_file_info *);
+int   			   sfs_unlink(const char *);
+int   			   sfs_rmdir(const char *);
+int   			   sfs_rename(const char *, const char *);
+int   			   sfs_utimens(const char *, const struct timespec tv[2]);
+int   			   sfs_truncate(const char *, off_t);
+			
+int   			   sfs_open(const char *, struct fuse_file_info *);
+int   			   sfs_opendir(const char *, struct fuse_file_info *);
+int   			   sfs_access(const char *, int);
 /******************************************************************************
-* SECTION: debug.c
+* SECTION: sfs_debug.c
 *******************************************************************************/
-void sfs_dump_map();
+void 			   sfs_dump_map();
 #endif

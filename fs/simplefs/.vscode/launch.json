@@ -5,19 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: 当前文件",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
             "name": "gcc - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/sfs-fuse",
             "args": [
-                "--device=/dev/ddriver",
+                "--device=${env:HOME}/ddriver",
                 "-f",
                 "-d",
                 "-s",
