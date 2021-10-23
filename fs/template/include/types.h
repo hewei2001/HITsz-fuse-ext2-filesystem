@@ -9,6 +9,7 @@ struct custom_options {
 
 struct PROJECT_NAME_super {
     uint32_t magic;
+    int      fd;
     /* TODO: Define yourself */
 }
 

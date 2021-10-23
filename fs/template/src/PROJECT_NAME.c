@@ -14,6 +14,7 @@ static const struct fuse_opt option_spec[] = {		/* 用于FUSE文件系统解析�
 };
 
 struct custom_options PROJECT_NAME_options;			 /* 全局选项 */
+struct PROJECT_NAME_super super; 
 /******************************************************************************
 * SECTION: FUSE操作定义
 *******************************************************************************/
@@ -34,7 +35,7 @@ static struct fuse_operations operations = {
 
 	.open = NULL,							
 	.opendir = NULL,
-	.access = NULL
+	.access = PROJECT_NAME_access
 };
 /******************************************************************************
 * SECTION: 必做函数实现
@@ -47,6 +48,10 @@ static struct fuse_operations operations = {
  */
 void* PROJECT_NAME_init(struct fuse_conn_info * conn_info) {
 	/* TODO: 在这里进行挂载 */
+
+	/* 下面是一个控制设备的示例 */
+	super.fd = ddriver_open(PROJECT_NAME_options.device);
+	
 	return NULL;
 }
 
@@ -58,6 +63,9 @@ void* PROJECT_NAME_init(struct fuse_conn_info * conn_info) {
  */
 void PROJECT_NAME_destroy(void* p) {
 	/* TODO: 在这里进行卸载 */
+	
+	ddriver_close(super.fd);
+
 	return;
 }
 

@@ -159,6 +159,7 @@ int ddriver_seek(int fd, off_t offset, int whence){
                       offset, CONFIG_BLOCK_SZ);
         return -EINVAL;
     }
+    INC_SEEKCNT(disk);
     return lseek(fd, offset, whence);
 }
 /**
@@ -194,7 +195,7 @@ int ddriver_read(int fd, char *buf, size_t size){
 
     read(fd, buf, size);
 
-    INC_WRITECNT(disk);
+    INC_READCNT(disk);
     return CONFIG_BLOCK_SZ;
 }
 /**
@@ -219,6 +220,12 @@ int ddriver_ioctl(int fd, unsigned long cmd, void *arg){
         memcpy(arg, &state, sizeof(struct ddriver_state));
         break;
     case IOC_REQ_DEVICE_RESET:                        /* Reset Device */
+        lseek(fd, 0, SEEK_SET);
+        char buf[1] = {'\0'};
+        for (size_t i = 0; i < CONFIG_DISK_SZ; i++)
+        {
+            write(fd, buf, 1);
+        }
         lseek(fd, 0, SEEK_SET);
         disk.read_cnt = 0;
         disk.write_cnt = 0;

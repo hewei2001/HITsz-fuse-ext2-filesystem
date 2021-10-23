@@ -39,6 +39,7 @@ function usage(){
     echo "-d            导出ddriver至当前工作目录[PWD]"
     echo "-r            擦除ddriver"
     echo "-l            显示ddriver的Log"
+    echo "-v            显示ddriver的类型[内核模块 / 用户静态链接库]"
     echo "-h            打印本帮助菜单"
     echo "===================================================================="
 }
@@ -88,15 +89,23 @@ function install() {
         sudo chmod 777 $KERNEL_DEV_PATH
         sudo rm /usr/bin/ddriver>/dev/null 2>&1
         sudo ln -s "$WORK_DIR"/ddriver.sh /usr/bin/ddriver>/dev/null 2>&1
+        echo "" >>"$HOME"/.bashrc
+        source "$HOME"/.bashrc   
+
         echo "export DDRIVER_TYPE='k'" >>"$HOME"/.bashrc
         source "$HOME"/.bashrc
         cd ..
     else 
+        touch -f "$USER_DEV_PATH"
+        
         LAST_DIR=$PWD
         cd $USER_DDRIVER || exit
         make all -f ./Makefile
         
         mkdir -p bin
+        
+        echo "" >>"$HOME"/.bashrc
+        source "$HOME"/.bashrc   
         
         echo "export PATH=$PWD/bin:$PATH" >>"$HOME"/.bashrc  
         source "$HOME"/.bashrc     
@@ -154,10 +163,18 @@ function clean(){
     fi 
 }
 
+function version () {
+    if [ "$DDRIVER_TYPE" == "k" ]; then  
+        echo "内核设备: $KERNEL_DEV_PATH"
+    else
+        echo "静态链接库设备: $USER_DEV_PATH"
+    fi 
+}
+
 if [ $# == 0 ]; then
     usage
 else 
-    while getopts 'i:tdhrl' OPT; do
+    while getopts 'i:tdhrlv' OPT; do
         case $OPT in
             i) install "$OPTARG"
             ;;
@@ -168,6 +185,8 @@ else
             r) clean
             ;;
             l) log
+            ;;
+            v) version 
             ;;
             h) usage
             ;;

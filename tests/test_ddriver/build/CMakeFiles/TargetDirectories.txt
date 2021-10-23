@@ -1,3 +1,0 @@
-/home/Programming/user-land-filesystem/tests/test_ddriver/build/CMakeFiles/rebuild_cache.dir
-/home/Programming/user-land-filesystem/tests/test_ddriver/build/CMakeFiles/ddriver_test.dir
-/home/Programming/user-land-filesystem/tests/test_ddriver/build/CMakeFiles/edit_cache.dir

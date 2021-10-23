@@ -5,11 +5,8 @@ DRIVER_DIR="./driver"
 FS_DIR="./fs"
 WORKSPACE_NAME=""
 PROJECT_NAME=""
-#===================================
-function mkdev() {
-    touch -f "$HOME/ddriver"
-}
 
+#===================================
 function install_driver() {
     current_user=$(whoami)
 
@@ -150,7 +147,7 @@ function build_workspace() {
     # 修改测试脚本
     generate_test_script
 
-    # Cmake配置工程
+    # Vscode配置工程
     generate_vscode
 
     # SPEC文件
@@ -161,7 +158,6 @@ function build_workspace() {
 
 function main() {
     # $1: workspacename
-    mkdev
     install_driver
     build_workspace
 }
@@ -172,4 +168,4 @@ else
     WORKSPACE_NAME="$1"
 fi
 
-main
+main 

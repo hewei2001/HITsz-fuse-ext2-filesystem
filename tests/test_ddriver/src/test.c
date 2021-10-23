@@ -5,8 +5,10 @@ int main(int argc, char const *argv[])
 {
     int size;
     struct ddriver_state state;
-    int fd = ddriver_open("");
-
+    int fd = ddriver_open("/root/ddriver");
+    if (fd < 0) {
+        return -1;
+    }
     /* Cycle 1: read/write test */
     char buffer[512]={'a'};
     char rbuffer[512];

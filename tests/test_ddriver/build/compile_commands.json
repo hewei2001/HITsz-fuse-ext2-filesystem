@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/Programming/user-land-filesystem/tests/test_ddriver/build",
-  "command": "/usr/bin/x86_64-linux-gnu-gcc-9.3.1 -I.././include  -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -o CMakeFiles/ddriver_test.dir/src/test.c.o -c /home/Programming/user-land-filesystem/tests/test_ddriver/src/test.c",
-  "file": "/home/Programming/user-land-filesystem/tests/test_ddriver/src/test.c"
-}
-]
