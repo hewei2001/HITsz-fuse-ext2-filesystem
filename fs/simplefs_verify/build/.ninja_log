@@ -1,5 +1,0 @@
-# ninja log v5
-0	40	1634979733093153220	CMakeFiles/sfs-fuse.dir/src/sfs.c.o	720f178f53007bd4
-1	47	1634979733099153317	CMakeFiles/sfs-fuse.dir/src/sfs_debug.c.o	6be530680492be19
-3	72	1634979733126153753	CMakeFiles/sfs-fuse.dir/src/sfs_utils.c.o	9f9c5e0f4e2c31a9
-72	318	1634979733369157680	sfs-fuse	43dee425092a2729
