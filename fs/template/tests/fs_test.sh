@@ -6,7 +6,7 @@ cd $WORK_DIR
 
 MNTPOINT='./mnt'
 PROJECT_NAME="SAMPLE_PROJECT_NAME"
-ALL_POINTS=28
+ALL_POINTS=23
 POINTS=0
 
 function pass() {
@@ -55,7 +55,6 @@ function test_mkdir() {
     core_tester mkdir ${MNTPOINT}/dir0/dir0/dir0
     core_tester mkdir ${MNTPOINT}/dir1
 
-    pass $TEST_CASE
     
     echo "<<<<<<<<<<<<<<<<<<<<"
 }
@@ -70,7 +69,6 @@ function test_touch() {
     core_tester touch ${MNTPOINT}/dir0/dir0/dir0/file0;
     core_tester touch ${MNTPOINT}/dir1/file0;
 
-    pass $TEST_CASE
     
     echo "<<<<<<<<<<<<<<<<<<<<"
 }
@@ -85,8 +83,6 @@ function test_ls() {
     core_tester ls ${MNTPOINT}/dir0/dir0/dir0;
     core_tester ls ${MNTPOINT}/dir1;
 
-    pass $TEST_CASE
-    
     echo "<<<<<<<<<<<<<<<<<<<<"
 }
 
@@ -97,7 +93,6 @@ function test_cp() {
     cp ${MNTPOINT}/file0 ${MNTPOINT}/file1 
     if [ $? -ne 0 ]; then
         fail $TEST_CASE
-        
     fi
 
     pass $TEST_CASE
@@ -138,8 +133,6 @@ function test_remount() {
         pass "-> fusermount -u ${MNTPOINT}"
     fi
 
-    pass $TEST_CASE
-
     echo "<<<<<<<<<<<<<<<<<<<<"
 }
 
@@ -151,8 +144,6 @@ function test_main() {
     test_mkdir "[all-the-mkdir-test]"
     echo ""
     test_touch "[all-the-mkdir-test]"
-    echo ""
-    test_cp "[all-the-cp-test]"
     echo ""
     test_ls "[all-the-ls-test]"
     echo ""

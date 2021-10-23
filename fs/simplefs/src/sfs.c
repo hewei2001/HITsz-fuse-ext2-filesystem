@@ -117,7 +117,7 @@ int sfs_getattr(const char* path, struct stat * sfs_stat) {
 	if (is_root) {
 		sfs_stat->st_size	= sfs_super.sz_usage; 
 		sfs_stat->st_blocks = SFS_DISK_SZ() / SFS_IO_SZ();
-		sfs_stat->st_nlink  = 2;
+		sfs_stat->st_nlink  = 2;		/* !特殊，根目录link数为2 */
 	}
 	return SFS_ERROR_NONE;
 }

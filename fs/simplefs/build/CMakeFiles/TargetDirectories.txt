@@ -1,3 +1,0 @@
-/home/Programming/user-land-filesystem/fs/simplefs/build/CMakeFiles/rebuild_cache.dir
-/home/Programming/user-land-filesystem/fs/simplefs/build/CMakeFiles/sfs-fuse.dir
-/home/Programming/user-land-filesystem/fs/simplefs/build/CMakeFiles/edit_cache.dir

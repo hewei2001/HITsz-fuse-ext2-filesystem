@@ -3,7 +3,8 @@
 ROOT_DIR="$PWD"
 DRIVER_DIR="./driver"
 FS_DIR="./fs"
-
+WORKSPACE_NAME=""
+PROJECT_NAME=""
 #===================================
 function mkdev() {
     touch -f "$HOME/ddriver"
@@ -32,38 +33,33 @@ function install_driver() {
     cd "$ROOT_DIR" || exit
 }
 
-function build_workspace() {
-    # $1: workspacename
-    WORKSPACE_NAME="$1"
-    cd $FS_DIR || exit
-    override="Y"
-    if test -e "$WORKSPACE_NAME" ; then 
-        read -r -p "已存在工作目录，是否覆盖 ? (Y/n)" override 
-        echo "$override"
-    fi
-
-    if [ "$override" == "Y" ]; then
-        rm -rf "$WORKSPACE_NAME"
-    else
-        exit 0
-    fi
-    
-    mkdir "$WORKSPACE_NAME"
-    sudo cp ./template/. "$WORKSPACE_NAME" -a 
-    echo "生成工作路径: " "$PWD"/"$WORKSPACE_NAME"
-    
-    # 修改 CMakeLists
+function generate_CMakelists () {
     read -r -p "请输入项目名称: " PROJECT_NAME 
     sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" "$WORKSPACE_NAME"/CMakeLists.txt
-    
-    # 修改 src
-    mv "$WORKSPACE_NAME"/src/SRC.c "$WORKSPACE_NAME"/src/"$PROJECT_NAME".c
+}
 
-    # 修改测试脚本
+function generate_skeleton() {
+    SRC_DIR="$WORKSPACE_NAME"/src
+    INC_DIR="$WORKSPACE_NAME"/include
+
+    mv $SRC_DIR/PROJECT_NAME.c $SRC_DIR/"$PROJECT_NAME".c
+    mv $INC_DIR/PROJECT_NAME.h $INC_DIR/"$PROJECT_NAME".h
+
+    sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" $SRC_DIR/"$PROJECT_NAME".c
+    sed -i "s/PROJECT_NAME^^/${PROJECT_NAME^^}/g" $INC_DIR/"$PROJECT_NAME".h
+    sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" $INC_DIR/"$PROJECT_NAME".h
+    sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" $INC_DIR/types.h
+}
+
+function generate_test_script () {
     sed -i "s/SAMPLE_PROJECT_NAME/${PROJECT_NAME}/g" "$WORKSPACE_NAME"/tests/fs_test.sh
+}
 
-    # Cmake配置工程
-    mkdir "$WORKSPACE_NAME"/build
+function generate_vscode () {
+    # 修改lunch.json
+    sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" "$WORKSPACE_NAME"/.vscode/launch.json
+
+    # 修改tasks.json
     GENERATOR="make"
 
     if command -v ninja > /dev/null 2>&1; then
@@ -71,14 +67,10 @@ function build_workspace() {
     else
         GENERATOR="make"
     fi
-    
-    # 修改lunch.json
-    sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" "$WORKSPACE_NAME"/.vscode/launch.json
-
-    # 修改tasks.json
     sed -i "s/GENERATOR/${GENERATOR}/g" "$WORKSPACE_NAME"/.vscode/tasks.json
+}
 
-
+function generate_spec () {
     echo "
 ========================================================================
 一. 项目编译步骤如下: 
@@ -123,11 +115,47 @@ options:
 在本项目中，我们已经有了两个FUSE文件系统样例
 1. SFS  (${ROOT_DIR}/simplefs)
 2. MYFS (${ROOT_DIR}/sapmles)
-大家直接SSH切到相应目录，打断点运行即可
+大家直接SSH切到相应目录，打断点运行即可:
+注意SFS和MYFS的编译需要和"一"中步骤1 ~ 7一致
 ========================================================================
     " >"$ROOT_DIR"/$FS_DIR/"$WORKSPACE_NAME"/SPEC.txt
     cat "$ROOT_DIR"/$FS_DIR/"$WORKSPACE_NAME"/SPEC.txt
     echo "上述说明已生成至" "$ROOT_DIR"/fs/"$WORKSPACE_NAME"/SPEC.txt
+}
+
+function build_workspace() {
+    cd $FS_DIR || exit
+    override="Y"
+    if test -e "$WORKSPACE_NAME" ; then 
+        read -r -p "已存在工作目录，是否覆盖 ? (Y/n)" override 
+        echo "$override"
+    fi
+
+    if [ "$override" == "Y" ]; then
+        rm -rf "$WORKSPACE_NAME"
+    else
+        exit 0
+    fi
+    
+    mkdir "$WORKSPACE_NAME"
+    sudo cp ./template/. "$WORKSPACE_NAME" -a 
+    echo "生成工作路径: " "$PWD"/"$WORKSPACE_NAME"
+    
+    # 修改 CMakeLists
+    generate_CMakelists
+    
+    # 修改 src
+    generate_skeleton
+
+    # 修改测试脚本
+    generate_test_script
+
+    # Cmake配置工程
+    generate_vscode
+
+    # SPEC文件
+    generate_spec
+
     cd "$ROOT_DIR" || exit
 }
 
@@ -135,7 +163,7 @@ function main() {
     # $1: workspacename
     mkdev
     install_driver
-    build_workspace "$1"
+    build_workspace
 }
 
 if [[ $# -lt 1 ]]; then
@@ -144,4 +172,4 @@ else
     WORKSPACE_NAME="$1"
 fi
 
-main "$WORKSPACE_NAME"
+main
