@@ -11,6 +11,8 @@ function mkdev() {
 
 function install_driver() {
     current_user=$(whoami)
+
+    # 测试是否有SUDO权限
     if [ "$current_user" != "root" ]; then
         has_root_permission=$(sudo -l -U "$current_user" | grep "(root) ALL")
         if [ -n "$has_root_permission" ]; then
@@ -20,7 +22,7 @@ function install_driver() {
                 sudo yum install make cmake fuse fuse-devel 
             fi 
         else
-            echo "你没有权限安装内核模块"
+            echo "警告：没有包被安装，如果是校内远程计算节点，请忽略"
         fi
     fi
     
@@ -49,17 +51,16 @@ function build_workspace() {
     mkdir "$WORKSPACE_NAME"
     sudo cp ./template/. "$WORKSPACE_NAME" -a 
     echo "生成工作路径: " "$PWD"/"$WORKSPACE_NAME"
+    
     # 修改 CMakeLists
     read -r -p "请输入项目名称: " PROJECT_NAME 
     sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" "$WORKSPACE_NAME"/CMakeLists.txt
+    
     # 修改 src
     mv "$WORKSPACE_NAME"/src/SRC.c "$WORKSPACE_NAME"/src/"$PROJECT_NAME".c
 
     # 修改测试脚本
     sed -i "s/SAMPLE_PROJECT_NAME/${PROJECT_NAME}/g" "$WORKSPACE_NAME"/tests/fs_test.sh
-    
-    # C_COMPILER=$(which gcc)
-    # CPP_COMPILER=$(which g++)
 
     # Cmake配置工程
     mkdir "$WORKSPACE_NAME"/build
