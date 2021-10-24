@@ -38,6 +38,8 @@ function generate_CMakelists () {
 function generate_skeleton() {
     SRC_DIR="$WORKSPACE_NAME"/src
     INC_DIR="$WORKSPACE_NAME"/include
+    
+    mkdir -p "$WORKSPACE_NAME"/tests/mnt
 
     mv $SRC_DIR/PROJECT_NAME.c $SRC_DIR/"$PROJECT_NAME".c
     mv $INC_DIR/PROJECT_NAME.h $INC_DIR/"$PROJECT_NAME".h
