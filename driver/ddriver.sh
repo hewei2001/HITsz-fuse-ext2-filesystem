@@ -159,7 +159,7 @@ function clean(){
         sudo dd if=/dev/zero of=$KERNEL_DEV_PATH bs=$CONFIG_BLOCK_SZ count=$BLOCK_COUNT
     else
         echo "目标设备 $USER_DEV_PATH"
-        sudo dd if=/dev/zero of="$USER_DEV_PATH" bs=$CONFIG_BLOCK_SZ count=$BLOCK_COUNT
+        dd if=/dev/zero of="$USER_DEV_PATH" bs=$CONFIG_BLOCK_SZ count=$BLOCK_COUNT
     fi 
 }
 
