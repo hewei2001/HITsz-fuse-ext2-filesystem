@@ -135,7 +135,7 @@ function build_workspace() {
     fi
     
     mkdir "$WORKSPACE_NAME"
-    sudo cp ./template/. "$WORKSPACE_NAME" -a 
+    cp ./template/. "$WORKSPACE_NAME" -a 
     echo "生成工作路径: " "$PWD"/"$WORKSPACE_NAME"
     
     # 修改 CMakeLists
