@@ -84,11 +84,12 @@ Step 7. 按下F5进行调试
 我们已经为同学们安装好了ddriver (disk driver)，支持命令如下
 ddriver [options]
 options:
--i            安装ddriver
+-i [k|u]      安装ddriver: [k] - kernel / [u] - user
 -t            测试ddriver[请忽略]
 -d            导出ddriver至当前工作目录[PWD]
 -r            擦除ddriver
 -l            显示ddriver的Log
+-v            显示ddriver的类型[内核模块 / 用户静态链接库]
 -h            打印本帮助菜单
 三. 文件结构说明
 1. 项目根目录: ${ROOT_DIR}
