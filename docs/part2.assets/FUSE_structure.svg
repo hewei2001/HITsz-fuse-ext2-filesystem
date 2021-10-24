@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="490.20297"
+   height="370.72598"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docbase="/tmp"
+   sodipodi:docname="FUSE_structure.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5708">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5710" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5712" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5708"
+       id="radialGradient5724"
+       cx="354.62604"
+       cy="70.883789"
+       fx="354.62604"
+       fy="70.883789"
+       r="6.9540066"
+       gradientTransform="matrix(1.1638755,0.1500933,-0.3935258,3.0515329,-30.195865,-197.58725)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5708"
+       id="radialGradient5740"
+       cx="355.54294"
+       cy="96.163719"
+       fx="355.54294"
+       fy="96.163719"
+       r="56.917639"
+       gradientTransform="matrix(1.1636312e-2,-0.2523106,0.1570681,7.2438207e-3,336.30146,159.34748)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="422.58618"
+     inkscape:cy="163.29102"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1272"
+     inkscape:window-height="954"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     showgrid="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Fuse Structure</dc:title>
+        <dc:date>02.11.2007, 07.08.2008</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>http://commons.wikimedia.org/wiki/User:Sven</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>http://commons.wikimedia.org/</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>http://commons.wikimedia.org/</dc:identifier>
+        <dc:source>http://fuse.sourceforge.net/fuse_structure.png</dc:source>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-16.4358, -8.89656)">
+    <rect
+       ry="8.5714283"
+       rx="8.5714283"
+       y="8.8965569"
+       x="16.435827"
+       height="179.80716"
+       width="490.20297"
+       id="rect7182"
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(222, 255, 228); fill-opacity: 0.338028; fill-rule: evenodd; stroke: none; stroke-width: 3.4; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+    <rect
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(255, 255, 255); fill-opacity: 0.887324; fill-rule: evenodd; stroke: rgb(88, 88, 88); stroke-width: 1.8; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: 3.6, 1.8; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;"
+       id="rect4205"
+       width="148"
+       height="91.428574"
+       x="151.55545"
+       y="75.55069" />
+    <rect
+       y="32.693546"
+       x="325.84119"
+       height="134.28572"
+       width="148"
+       id="rect4207"
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(255, 255, 255); fill-opacity: 0.887324; fill-rule: evenodd; stroke: rgb(88, 88, 88); stroke-width: 1.8; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: 3.6, 1.8; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+    <rect
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(255, 239, 199); fill-opacity: 0.338028; fill-rule: evenodd; stroke: none; stroke-width: 3.4; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;"
+       id="rect6203"
+       width="490.20297"
+       height="191.92899"
+       x="16.435827"
+       y="187.69356"
+       rx="8.5714283"
+       ry="8.5714283" />
+    <rect
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: none; fill-opacity: 1; fill-rule: evenodd; stroke: rgb(152, 152, 152); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;"
+       id="rect2239"
+       width="130.54718"
+       height="30"
+       x="334.21854"
+       y="40.550694" />
+    <rect
+       ry="8.5714283"
+       rx="8.5714293"
+       y="84.122124"
+       x="334.21854"
+       height="30"
+       width="130.54718"
+       id="use4183"
+       style="overflow: visible; marker: none; color: rgb(0, 0, 0); fill: rgb(218, 246, 191); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+    <rect
+       ry="8.5714283"
+       rx="8.5714293"
+       y="127.69355"
+       x="334.21854"
+       height="30"
+       width="130.54718"
+       id="use4185"
+       style="overflow: visible; marker: none; color: rgb(0, 0, 0); fill: rgb(255, 219, 182); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+    <rect
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: none; fill-opacity: 1; fill-rule: evenodd; stroke: rgb(152, 152, 152); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;"
+       id="rect4187"
+       width="123.62354"
+       height="30"
+       x="163.74368"
+       y="84.122124" />
+    <rect
+       ry="8.5714283"
+       rx="8.5714283"
+       y="127.69355"
+       x="163.74368"
+       height="30"
+       width="123.62354"
+       id="rect4189"
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(255, 219, 182); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+    <path
+       style="fill: none; fill-rule: evenodd; stroke: rgb(58, 58, 58); stroke-width: 3.4; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       d="M 16.435787,187.69356 L 506.63884,187.69356"
+       id="path4203"
+       sodipodi:nodetypes="cc" />
+    <rect
+       y="201.97928"
+       x="151.55545"
+       height="148.57143"
+       width="148"
+       id="rect4209"
+       style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(245, 245, 245); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+    <text
+       xml:space="preserve"
+       style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="399.169"
+       y="104.827"
+       id="text5198"><tspan
+         sodipodi:role="line"
+         id="tspan5200"
+         x="399.169"
+         y="104.827">libfuse</tspan></text>
+    <text
+       id="text5202"
+       y="146.904"
+       x="399.303"
+       style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       xml:space="preserve"><tspan
+         y="146.904"
+         x="399.303"
+         id="tspan5204"
+         sodipodi:role="line">glibc</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="225.366"
+       y="146.904"
+       id="text5206"><tspan
+         sodipodi:role="line"
+         id="tspan5208"
+         x="225.366"
+         y="146.904">glibc</tspan></text>
+    <g
+       id="g8159"
+       transform="translate(0, 9.01554e-06)">
+      <rect
+         y="201.97928"
+         x="334.4126"
+         height="30"
+         width="133.57143"
+         id="rect4197"
+         style="overflow: visible; marker: none; color: rgb(0, 0, 0); fill: rgb(138, 226, 52); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+      <text
+         xml:space="preserve"
+         style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         x="400.882"
+         y="222.498"
+         id="text5210"><tspan
+           sodipodi:role="line"
+           id="tspan5212"
+           x="400.882"
+           y="222.498">FUSE</tspan></text>
+    </g>
+    <g
+       id="g8169"
+       transform="translate(0, 5.47619)"
+       style="opacity: 0.568421;">
+      <rect
+         y="275.55072"
+         x="334.4126"
+         height="30"
+         width="133.57143"
+         id="rect4201"
+         style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(245, 245, 245); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;" />
+      <text
+         id="text5214"
+         y="296.085"
+         x="400.894"
+         style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="296.085"
+           x="400.894"
+           id="tspan5216"
+           sodipodi:role="line">Ext3</tspan></text>
+    </g>
+    <g
+       id="g8174"
+       style="opacity: 0.259649;">
+      <rect
+         style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(245, 245, 245); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;"
+         id="rect4199"
+         width="133.57143"
+         height="30"
+         x="334.4126"
+         y="320.55072" />
+      <text
+         xml:space="preserve"
+         style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         x="401.035"
+         y="341.085"
+         id="text5218"><tspan
+           sodipodi:role="line"
+           id="tspan5220"
+           x="401.035"
+           y="341.085">...</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="225.897"
+       y="281.799"
+       id="text5222"><tspan
+         sodipodi:role="line"
+         id="tspan5224"
+         x="225.897"
+         y="281.799">VFS</tspan></text>
+    <text
+       id="text5226"
+       y="103.411"
+       x="225.232"
+       style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       xml:space="preserve"><tspan
+         y="103.411"
+         x="225.232"
+         id="tspan5228"
+         sodipodi:role="line">ls -l /tmp/fuse</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 14.7408px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="398.941"
+       y="59.7037"
+       id="text5230"><tspan
+         sodipodi:role="line"
+         id="tspan5232"
+         x="398.941"
+         y="59.7037">./hello /tmp/fuse</tspan></text>
+    <text
+       id="text7174"
+       y="213.109"
+       x="62.2527"
+       style="font-size: 15.2231px; font-style: normal; font-weight: bold; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       xml:space="preserve"><tspan
+         y="213.109"
+         x="62.2527"
+         id="tspan7176"
+         sodipodi:role="line">Kernel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 15.2231px; font-style: normal; font-weight: bold; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="78.613"
+       y="170.662"
+       id="text7178"><tspan
+         sodipodi:role="line"
+         id="tspan7180"
+         x="78.613"
+         y="170.662">Userspace</tspan></text>
+    <g
+       id="g8164"
+       transform="translate(-2.02029, 2.31787)"
+       style="opacity: 0.789474;">
+      <rect
+         style="overflow: visible; marker: none; opacity: 1; color: rgb(0, 0, 0); fill: rgb(245, 245, 245); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1; visibility: visible; display: inline;"
+         id="rect8153"
+         width="133.57143"
+         height="30"
+         x="336.43289"
+         y="239.18523" />
+      <text
+         xml:space="preserve"
+         style="font-size: 15.2231px; font-style: normal; font-weight: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         x="402.914"
+         y="259.719"
+         id="text8155"><tspan
+           sodipodi:role="line"
+           id="tspan8157"
+           x="402.914"
+           y="259.719">NFS</tspan></text>
+    </g>
+    <g
+       id="g5171"
+       style="fill-opacity:1;fill:url(#radialGradient5740)">
+      <path
+         style="fill:url(#radialGradient5740);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.59999989999999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 360.28125,60.15625 C 358.32836,60.15625 356.65459,61.12125 355.625,62.375 C 354.59541,63.62875 354.07065,65.093615 353.71875,66.5 C 353.01495,69.312767 353.125,72 353.125,72 C 353.11511,72.664405 353.47203,73.280228 354.05344,73.601929 C 354.63485,73.923629 355.3462,73.898886 355.90386,73.537566 C 356.46151,73.176246 356.77478,72.537112 356.71875,71.875 C 356.71875,71.875 356.64022,69.562233 357.1875,67.375 C 357.46114,66.281385 357.89607,65.2775 358.40625,64.65625 C 358.91643,64.035 359.37916,63.75 360.28125,63.75 C 361.26662,63.75 361.64683,64.03539 362.125,64.6875 C 362.60317,65.33961 362.98832,66.444162 363.1875,67.625 C 363.58586,69.986677 363.34375,72.5 363.34375,72.5 C 363.33004,72.561906 363.31961,72.624493 363.3125,72.6875 L 363.3125,220.04018 L 259.03125,220.04018 L 259.03125,116.125 C 259.07178,115.45703 258.73844,114.8217 258.16577,114.47547 C 257.59311,114.12923 256.87564,114.12923 256.30298,114.47547 C 255.73031,114.8217 255.39697,115.45703 255.4375,116.125 L 255.4375,221.82143 C 255.43419,222.30314 255.62409,222.76608 255.96472,223.10671 C 256.30535,223.44734 256.76829,223.63724 257.25,223.63393 L 365.125,223.63393 C 366.11663,223.62353 366.91309,222.81309 366.90625,221.82143 L 366.90625,72.90625 L 366.90625,72.6875 C 366.94129,72.373325 367.22743,69.861655 366.75,67.03125 C 366.49603,65.52562 366.0305,63.925241 365.03125,62.5625 C 364.032,61.199759 362.32935,60.15625 360.28125,60.15625 z"
+         id="path10129"
+         sodipodi:nodetypes="csscsscssssscccccssccscccccssc" />
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:0.71999997999999998pt;marker-start:none;fill-opacity:1;fill:url(#radialGradient5740)"
+         d="M 257.23789,120.4464 L 260.83789,124.0464 L 257.23789,111.4464 L 253.63789,124.0464 L 257.23789,120.4464 z"
+         id="path5177" />
+    </g>
+    <g
+       id="g5146">
+      <path
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.5999999;stroke-linecap:round;stroke-linejoin:round;marker:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="M 354.90625,70.875 C 353.98868,70.980833 353.3001,71.763934 353.3125,72.6875 L 353.3125,212.19196 L 269.03125,212.19196 L 269.03125,116.125 C 269.07178,115.45703 268.73844,114.8217 268.16577,114.47547 C 267.59311,114.12923 266.87564,114.12923 266.30298,114.47547 C 265.73031,114.8217 265.39697,115.45703 265.4375,116.125 L 265.4375,213.97321 C 265.43419,214.45492 265.62409,214.91786 265.96472,215.25849 C 266.30535,215.59912 266.76829,215.78902 267.25,215.78571 L 355.125,215.78571 C 356.11663,215.77531 356.91309,214.96487 356.90625,213.97321 L 356.90625,72.6875 C 356.91298,72.171199 356.69768,71.676864 356.31508,71.330129 C 355.93247,70.983393 355.4194,70.817642 354.90625,70.875 z"
+         id="path9148"
+         sodipodi:nodetypes="cccccssccsccccsc" />
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:0.71999998pt;marker-start:none"
+         d="M 355.12115,77.009842 L 358.72115,80.609842 L 355.12115,68.009842 L 351.52115,80.609842 L 355.12115,77.009842 z"
+         id="path5152" />
+    </g>
+  </g>
+</svg>
