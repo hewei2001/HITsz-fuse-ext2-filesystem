@@ -35,7 +35,7 @@ static struct fuse_operations operations = {
 
 	.open = NULL,							
 	.opendir = NULL,
-	.access = PROJECT_NAME_access
+	.access = NULL
 };
 /******************************************************************************
 * SECTION: 必做函数实现
@@ -129,23 +129,6 @@ int PROJECT_NAME_mknod(const char* path, mode_t mode, dev_t dev) {
 	/* TODO: 解析路径，并创建相应的文件 */
 	return 0;
 }
-
-/**
- * @brief 访问文件
- * 
- * @param path 相对于挂载点的路径
- * @param type 访问类别
- * R_OK: Test for read permission. 
- * W_OK: Test for write permission.
- * X_OK: Test for execute permission.
- * F_OK: Test for existence. 
- * 
- * @return int 0成功，否则失败
- */
-int PROJECT_NAME_access(const char* path, int type) {
-	/* TODO: 解析路径，判断是否存在 */
-	return 0;
-}	
 
 /**
  * @brief 修改时间，为了不让touch报错 
@@ -269,6 +252,24 @@ int PROJECT_NAME_truncate(const char* path, off_t offset) {
 	/* 选做 */
 	return 0;
 }
+
+
+/**
+ * @brief 访问文件，因为读写文件时需要查看权限
+ * 
+ * @param path 相对于挂载点的路径
+ * @param type 访问类别
+ * R_OK: Test for read permission. 
+ * W_OK: Test for write permission.
+ * X_OK: Test for execute permission.
+ * F_OK: Test for existence. 
+ * 
+ * @return int 0成功，否则失败
+ */
+int PROJECT_NAME_access(const char* path, int type) {
+	/* 选做: 解析路径，判断是否存在 */
+	return 0;
+}	
 /******************************************************************************
 * SECTION: FUSE入口
 *******************************************************************************/
