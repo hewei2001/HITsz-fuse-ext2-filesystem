@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 {
     int size;
     struct ddriver_state state;
-    int fd = ddriver_open("/root/ddriver");
+    int fd = ddriver_open("ddriver");
     if (fd < 0) {
         return -1;
     }
@@ -43,5 +43,7 @@ int main(int argc, char const *argv[])
     printf("seek_cnt: %d\n", state.seek_cnt);
 
     ddriver_close(fd);
+
+    printf("Test Pass :)\n");
     return 0;
 }
