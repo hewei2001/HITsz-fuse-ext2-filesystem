@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/guests/190110429/user-land-filesystem/fs/simplefs/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-9  -I/home/guests/190110429/user-land-filesystem/fs/simplefs/./include   -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g   -o CMakeFiles/sfs-fuse.dir/src/sfs.c.o   -c /home/guests/190110429/user-land-filesystem/fs/simplefs/src/sfs.c",
+  "file": "/home/guests/190110429/user-land-filesystem/fs/simplefs/src/sfs.c"
+},
+{
+  "directory": "/home/guests/190110429/user-land-filesystem/fs/simplefs/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-9  -I/home/guests/190110429/user-land-filesystem/fs/simplefs/./include   -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g   -o CMakeFiles/sfs-fuse.dir/src/sfs_debug.c.o   -c /home/guests/190110429/user-land-filesystem/fs/simplefs/src/sfs_debug.c",
+  "file": "/home/guests/190110429/user-land-filesystem/fs/simplefs/src/sfs_debug.c"
+},
+{
+  "directory": "/home/guests/190110429/user-land-filesystem/fs/simplefs/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-9  -I/home/guests/190110429/user-land-filesystem/fs/simplefs/./include   -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g   -o CMakeFiles/sfs-fuse.dir/src/sfs_utils.c.o   -c /home/guests/190110429/user-land-filesystem/fs/simplefs/src/sfs_utils.c",
+  "file": "/home/guests/190110429/user-land-filesystem/fs/simplefs/src/sfs_utils.c"
+}
+]

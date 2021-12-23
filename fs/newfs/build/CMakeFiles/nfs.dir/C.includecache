@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ddriver.h
+ddriver_ctl_user.h
+../include/ddriver_ctl_user.h
+stdio.h
+../include/stdio.h
+
+../include/ddriver_ctl_user.h
+sys/ioctl.h
+-
+
+../include/nfs.h
+stdio.h
+../include/stdio.h
+stdlib.h
+../include/stdlib.h
+unistd.h
+-
+fcntl.h
+../include/fcntl.h
+string.h
+../include/string.h
+fuse.h
+../include/fuse.h
+stddef.h
+-
+ddriver.h
+../include/ddriver.h
+errno.h
+../include/errno.h
+types.h
+../include/types.h
+
+../include/types.h
+
+/home/guests/190110429/user-land-filesystem/fs/newfs/src/nfs.c
+nfs.h
+/home/guests/190110429/user-land-filesystem/fs/newfs/src/nfs.h
+

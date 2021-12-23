@@ -260,7 +260,7 @@ void load_node(char * path, char * type, gid_t groupid, uid_t userid, time_t lc_
                 dir_node->children = (FStree **)realloc(dir_node->children, sizeof(FStree *) * dir_node->num_children);
 				if(strcmp(type,"directory")==0){
                 	dir_node->children[dir_node->num_children - 1] = init_node(path, dir, dir_node,1);
-					dir_node->children[dir_node->num_children - 1] ->permissions = lpermissions; //S_IFDIR | 0755
+					dir_node->children[dir_node->num_children - 1] ->permissions = lpermissions; // | 0755
 					dir_node->children[dir_node->num_children - 1]->type = "directory";
 				}
 				else{	dir_node->num_files++;

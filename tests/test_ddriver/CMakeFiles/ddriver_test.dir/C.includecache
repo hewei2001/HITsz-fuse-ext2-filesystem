@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/guests/190110429/user-land-filesystem/tests/test_ddriver/include/ddriver.h
+ddriver_ctl_user.h
+/home/guests/190110429/user-land-filesystem/tests/test_ddriver/include/ddriver_ctl_user.h
+stdio.h
+/home/guests/190110429/user-land-filesystem/tests/test_ddriver/include/stdio.h
+
+/home/guests/190110429/user-land-filesystem/tests/test_ddriver/include/ddriver_ctl_user.h
+sys/ioctl.h
+-
+
+/home/guests/190110429/user-land-filesystem/tests/test_ddriver/src/test.c
+../include/ddriver.h
+/home/guests/190110429/user-land-filesystem/tests/test_ddriver/include/ddriver.h
+linux/fs.h
+-
+

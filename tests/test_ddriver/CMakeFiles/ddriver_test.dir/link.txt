@@ -1,0 +1,1 @@
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -no-pie  -rdynamic CMakeFiles/ddriver_test.dir/src/test.c.o  -o ddriver_test  /home/guests/190110429/lib/libddriver.a 

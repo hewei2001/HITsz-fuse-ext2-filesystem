@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 {
     int size;
     struct ddriver_state state;
-    int fd = ddriver_open("ddriver");
+    int fd = ddriver_open("/home/guests/190110429/ddriver");
     if (fd < 0) {
         return -1;
     }

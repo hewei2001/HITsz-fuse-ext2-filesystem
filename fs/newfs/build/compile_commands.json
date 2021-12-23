@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/guests/190110429/user-land-filesystem/fs/newfs/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-9  -I/home/guests/190110429/user-land-filesystem/fs/newfs/./include   -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g   -o CMakeFiles/nfs.dir/src/nfs.c.o   -c /home/guests/190110429/user-land-filesystem/fs/newfs/src/nfs.c",
+  "file": "/home/guests/190110429/user-land-filesystem/fs/newfs/src/nfs.c"
+},
+{
+  "directory": "/home/guests/190110429/user-land-filesystem/fs/newfs/build",
+  "command": "/bin/x86_64-linux-gnu-gcc-9  -I/home/guests/190110429/user-land-filesystem/fs/newfs/./include   -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g   -o CMakeFiles/nfs.dir/src/nfs_utils.c.o   -c /home/guests/190110429/user-land-filesystem/fs/newfs/src/nfs_utils.c",
+  "file": "/home/guests/190110429/user-land-filesystem/fs/newfs/src/nfs_utils.c"
+}
+]
