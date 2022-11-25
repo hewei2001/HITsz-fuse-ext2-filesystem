@@ -53,46 +53,36 @@ FUSE 架构可以截获对文件的访问请求（通过 VFS 到 FUSE 的内核�
 - [x] mkdir
 - [x] cd
 
-- `mount`: **挂载 newfs 文件系统**
+-----
 
-    编译后以如下命令执行 nfs 文件：
-    
-    `./build/nfs --device={ddriverpath} -f -d -s {mntpath}`
-    
-    其中 `{ddriverpath}` 是 `ddriver` 驱动的路径，`{mntpath}` 是挂载点路径，默认为 `./tests/mnt`。
+`mount`: **挂载 newfs 文件系统**
 
-    > 在 vscode 中按下「F5」也可自动编译运行（调用 tasks.json 中的命令编译，调用 lauch.json 中的命令运行上述指令），运行后即可以实现挂载。
+- 编译后以如下命令执行 nfs 文件： `./build/nfs --device={ddriverpath} -f -d -s {mntpath}`
+- 其中 `{ddriverpath}` 是 `ddriver` 驱动的路径，`{mntpath}` 是挂载点路径，默认为 `./tests/mnt`。
 
--	`umount`：**卸载 newfs 文件系统**
+> 在 vscode 中按下「F5」也可自动编译运行（调用 tasks.json 中的命令编译，调用 lauch.json 中的命令运行上述指令），运行后即可以实现挂载。
 
-    执行如下命令：
-    
-    `fusermount -u {mntpath}`
+`umount`：**卸载 newfs 文件系统**
 
--	`ls`：**列出目录下的所有目录项**
-    
-    `ls`
-    
-    列出当前目录下的所有目录项
-    
-    `ls {path}`
-    
-    列出指定路径 `{path}` 下的所有目录项
+- 执行如下命令：`fusermount -u {mntpath}`
 
--	`mkdir`：**新建目录**
-    
-    `mkdir {dirpath}`
-    
-    `{dirpath}` 路径是一个目录，创建 `{dirpath}` 指向的目录，要求被创建目录之前的路径存在
+`ls`：**列出目录下的所有目录项**
 
--	`cd`：**更改当前工作目录**
-    
-    `cd {dirpath}`
-    
-    `{dirpath}` 路径是一个目录，切换当前工作目录到 `{dirpath}` 所指向目录
+- `ls`：列出当前目录下的所有目录项
 
--	`touch`：**新建文件**
-    
-    `touch {filepath}`
-    
-    `{filepath}` 路径是一个文件，在 `{filepath}` 指向处创建一个新文件
+- `ls {path}`：列出指定路径 `{path}` 下的所有目录项
+
+`mkdir`：**新建目录**
+
+- `mkdir {dirpath}`
+- ``{dirpath}` 路径是一个目录，创建 `{dirpath}` 指向的目录，要求被创建目录之前的路径存在
+
+`cd`：**更改当前工作目录**
+
+- `cd {dirpath}`
+- ``{dirpath}` 路径是一个目录，切换当前工作目录到 `{dirpath}` 所指向目录
+
+`touch`：**新建文件**
+
+- `touch {filepath}`
+- ``{filepath}` 路径是一个文件，在 `{filepath}` 指向处创建一个新文件
